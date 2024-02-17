@@ -21,7 +21,8 @@ export class MenubarComponent implements OnInit {
                         items: [
                             {
                                 label: 'Bookmark',
-                                icon: 'pi pi-fw pi-bookmark'
+                                icon: 'pi pi-fw pi-bookmark',
+                                routerLink: 'common'
                             },
                             {
                                 label: 'Video',
