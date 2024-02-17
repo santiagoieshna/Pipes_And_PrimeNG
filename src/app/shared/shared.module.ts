@@ -2,19 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MenuComponent } from './components/menu/menu.component';
 import { PrimeNGModule } from '../prime-ng/prime-ng.module';
+import { MenubarComponent } from './components/menubar/menubar.component';
 
 
 
 @NgModule({
   declarations: [
-    MenuComponent
+    MenuComponent,
+    MenubarComponent,
   ],
   imports: [
     CommonModule,
     PrimeNGModule
   ],
   exports: [
-    MenuComponent
+    MenuComponent,
+    MenubarComponent
   ]
 })
 export class SharedModule { }
