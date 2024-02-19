@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from 'primeng/api';
+import { MenuItem, PrimeIcons } from 'primeng/api';
 
 @Component({
     selector: 'shared-menubar',
@@ -12,40 +12,35 @@ export class MenubarComponent implements OnInit {
     ngOnInit() {
         this.items = [
             {
-                label: 'File',
-                icon: 'pi pi-fw pi-file',
+                label: 'Pipes de angular',
+                icon: 'pi pi-fw pi-th-large',
                 items: [
                     {
-                        label: 'New',
-                        icon: 'pi pi-fw pi-plus',
-                        items: [
-                            {
-                                label: 'Bookmark',
-                                icon: 'pi pi-fw pi-bookmark',
-                                routerLink: 'common'
-                            },
-                            {
-                                label: 'Video',
-                                icon: 'pi pi-fw pi-video'
-                            }
-                        ]
-                    },
-                    {
-                        label: 'Delete',
-                        icon: 'pi pi-fw pi-trash'
+                        label: 'Textos y Fechas',
+                        icon: PrimeIcons.ALIGN_LEFT,
+                        routerLink: '/'
                     },
                     {
                         separator: true
                     },
                     {
-                        label: 'Export',
-                        icon: 'pi pi-fw pi-external-link'
+                        label: 'Números',
+                        icon: PrimeIcons.DOLLAR,
+                        routerLink: 'number'
+                    },
+                    {
+                        separator: true
+                    },
+                    {
+                        label: 'No comunes',
+                        icon: PrimeIcons.QUESTION_CIRCLE,
+                        routerLink: 'common'
                     }
                 ]
             },
             {
-                label: 'Edit',
-                icon: 'pi pi-fw pi-pencil',
+                label: 'Pipes personalizados',
+                icon: PrimeIcons.COG,
                 items: [
                     {
                         label: 'Left',
@@ -65,74 +60,6 @@ export class MenubarComponent implements OnInit {
                     }
                 ]
             },
-            {
-                label: 'Users',
-                icon: 'pi pi-fw pi-user',
-                items: [
-                    {
-                        label: 'New',
-                        icon: 'pi pi-fw pi-user-plus'
-                    },
-                    {
-                        label: 'Delete',
-                        icon: 'pi pi-fw pi-user-minus'
-                    },
-                    {
-                        label: 'Search',
-                        icon: 'pi pi-fw pi-users',
-                        items: [
-                            {
-                                label: 'Filter',
-                                icon: 'pi pi-fw pi-filter',
-                                items: [
-                                    {
-                                        label: 'Print',
-                                        icon: 'pi pi-fw pi-print'
-                                    }
-                                ]
-                            },
-                            {
-                                icon: 'pi pi-fw pi-bars',
-                                label: 'List'
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                label: 'Events',
-                icon: 'pi pi-fw pi-calendar',
-                items: [
-                    {
-                        label: 'Edit',
-                        icon: 'pi pi-fw pi-pencil',
-                        items: [
-                            {
-                                label: 'Save',
-                                icon: 'pi pi-fw pi-calendar-plus'
-                            },
-                            {
-                                label: 'Delete',
-                                icon: 'pi pi-fw pi-calendar-minus'
-                            }
-                        ]
-                    },
-                    {
-                        label: 'Archieve',
-                        icon: 'pi pi-fw pi-calendar-times',
-                        items: [
-                            {
-                                label: 'Remove',
-                                icon: 'pi pi-fw pi-calendar-minus'
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                label: 'Quit',
-                icon: 'pi pi-fw pi-power-off'
-            }
         ];
     }
 }
